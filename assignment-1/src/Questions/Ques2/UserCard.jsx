@@ -4,13 +4,18 @@
 
 import React from "react";
 
-function UserCard(props) {
-  const { name, email, image } = props;
+function UserCard({ data }) {
+  const userData = data.map((value) => (
+    <li>
+      <p>{value.name}</p>
+      <p>{value.email}</p>
+      <img src={value.avatarURL} />
+    </li>
+  ));
+
   return (
     <div>
-      <p>My name is {name}</p>
-      <p>My email id is {email}</p>
-      <img src={image} />
+      <ul>{userData}</ul>
     </div>
   );
 }
