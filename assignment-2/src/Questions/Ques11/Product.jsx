@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { userContext } from "./ShoppingCart";
 
 function Product() {
-  const { cart, setCart, addItem, Delete } = useContext(userContext);
+  const { cart, addItem, deleteItem } = useContext(userContext);
   const products = [
     {
       id: 1,
@@ -64,7 +64,7 @@ function Product() {
             <td>
               <button
                 onClick={() => {
-                  Delete(item.id);
+                  deleteItem(item.id);
                 }}
               >
                 Delete

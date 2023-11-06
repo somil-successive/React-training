@@ -25,14 +25,14 @@ export function ShoppingCart() {
     ]);
   };
 
-  const Delete = (id) => {
-    const updatedItem = cart.filter((item) => item.id !== id);
-    setCart(updatedItem);
+  const deleteItem = (id) => {
+    const updatedCart = cart.filter((item) => item.id !== id);
+    setCart(updatedCart);
   };
 
   return (
     <>
-      <userContext.Provider value={{ cart, setCart, addItem, Delete }}>
+      <userContext.Provider value={{ cart, addItem, deleteItem }}>
         <Product />
       </userContext.Provider>
     </>

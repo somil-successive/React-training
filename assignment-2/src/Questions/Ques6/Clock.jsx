@@ -12,11 +12,13 @@ function Clock() {
   function getDate() {
     return new Date().toString();
   }
+
   useEffect(() => {
     setTimeout(() => {
       setTime(getDate());
     }, 1000);
   });
+
   return (
     <div>
       <p>Time is: {time}</p>

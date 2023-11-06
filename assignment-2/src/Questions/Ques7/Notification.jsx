@@ -9,15 +9,19 @@ import { useState, useEffect } from "react";
 
 function Notification() {
   const [message, setMessage] = useState("");
+  // const [count, setCount] = useState(5);
 
   useEffect(() => {
     setTimeout(() => {
       setMessage("");
     }, 5000);
-  });
+  }, [message]);
 
   const handleChange = (event) => {
     setMessage(event.target.value);
+    // setTimeout(() => {
+    //   setCount((prev) => prev - 1);
+    // }, 1000);
   };
 
   return (
