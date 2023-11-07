@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 
-const Question2=()=>{
-const [data,setData]=useState([]);
+const Question2 = () => {
+  const [data, setData] = useState([]);
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
 
-useEffect(() => {
-    fetch('https://musicapi13.p.rapidapi.com/public/search/introspection')
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/uss")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -15,24 +16,31 @@ useEffect(() => {
       })
       .then((data) => {
         setData(data);
-        
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
-       
+        console.log("Invalid api:", error);
       });
-  }, []);
+  }, [isButtonClicked]);
 
+  const handleClick = () => {
+    setIsButtonClicked(true);
+  };
 
   return (
     <div>
-      <ul>
-        {data.map((user,index) => (
-          <li key={index}>{user.sources}</li>
-        ))}
-      </ul>
+      <h3>Error Handling :</h3>
+      {isButtonClicked ? (
+        <ul>
+          {data.map((user) => (
+            <li key={user.id}>{user.email}</li>
+          ))}
+        </ul>
+      ) : null}
+
+      <br />
+      <button onClick={handleClick} disabled={isButtonClicked}>Fetch Data</button>
     </div>
   );
-}
+};
 
 export default Question2;

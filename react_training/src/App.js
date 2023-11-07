@@ -1,49 +1,32 @@
 import React from "react";
-import Greeting from "./Questions/Ques1/Greeting";
-import UserCard from "./Questions/Ques2/UserCard";
-import Weather from "./Questions/Ques3/Weather";
-import Counter from "./Questions/Ques4/Counter";
-import TaskList from "./Questions/Ques5/TaskList";
-import Button from "./Questions/Ques6/Button";
+import logo from "./logo.svg";
+import "./App.css";
+import Question1 from "./Assignment5/Question1";
+import Question2 from "./Assignment5/Question2";
+import Question3 from "./Assignment5/Question3";
+import Question4 from "./Assignment5/Question4";
+import Question5 from "./Assignment5/Question5";
 
-function App() {
-  const task = ["Eat", "Sleep", "Code", "Repeat"];
-  const data = [
-    {
-      name: "John",
-      email: "john123@gmail.com",
-      avatarURL:
-        "https://gravatar.com/avatar/ca3abb6cdeca9b8b59f02d5946c31731?s=400&d=robohash&r=x",
-    },
-    {
-      name: "doraemon",
-      email: "dora123@gmail.com",
-      avatarURL:
-        "https://robohash.org/98b7768c88d1ef0833cc56b2be08cf2c?set=set4&bgset=&size=400x400",
-    },
-  ];
-  const temp = [30, 10, -11];
-  return (
+ function App(){
+  return(
     <div>
-      <h3>Question-1</h3>
-      <Greeting />
-      <br />
-      <h3>Question-2</h3>
-      <UserCard data={data} />
-      <br />
-      <h3>Question-3</h3>
-      <Weather temp={temp} />
-      <br />
-      <h3>Question-4</h3>
-      <Counter />
-      <br />
-      <h3>Question-5</h3>
-      <TaskList task={task} />
-      <br />
-      <h3>Question-6</h3>
-      <Button text="I am a Button!" colour="red" />
+    <h2>Question-1</h2>
+    <Question1 />
+    <hr/>
+    <h2>Question-2</h2>
+    <Question2 />
+    <hr/>
+    <h2>Question-3</h2>
+    <Question3 />
+    <hr/>
+    <h2>Question-4</h2>
+    {/* <Question4 /> */}
+    <hr/>
+    <h2>Question-5</h2>
+    <Question5 />
+    
     </div>
-  );
+  )
 }
 
 export default App;

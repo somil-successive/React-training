@@ -2,34 +2,53 @@
 
 import React, { useEffect, useState } from "react";
 
-const Question3=()=>{
-    const[data,setData]=useState([]);
-    const[isLoading,setIsLoading]=useState(false);
+const Question3 = () => {
+  const [data, setData] = useState([]);
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(()=>{
-        fetch()
-        .then((response)=>{
-            if(!response.ok){
-                throw new Error("Error has Occured");
-            }else{
-                return response.json;
-            }
-        })
-        .then((data)=>{
-            setData(data)
-        setIsLoading()})
-        .catch((error)=>console.error(error))
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log("Invalid api:", error);
+      });
+  }, [isButtonClicked]);
 
-    },[])
-    return(
-        <>
-        <ul>
+  const handleClick = () => {
+    setIsButtonClicked(true);
+  };
 
+  return (
+    <div>
+     
+      {isButtonClicked ? (
+        isLoading ? (
+          "Loading..."
+        ) : (
+          <ul>
+            {data.map((user) => (
+              <li key={user.id}>{user.username}</li>
+            ))}
+          </ul>
+        )
+      ) : (
+        <p>Click Button!</p>
+      )}
 
-        </ul>
-        
-        
-        </>
-
-    )
-}
+      <button onClick={handleClick} disabled={isButtonClicked}>
+        Fetch Data
+      </button>
+    </div>
+  );
+};
+export default Question3;
