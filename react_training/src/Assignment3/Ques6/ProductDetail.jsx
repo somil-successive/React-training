@@ -1,10 +1,11 @@
 import React from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ProductDetail = () => {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const handleClick = () => {
-    return <Navigate to="/" />;
+    navigate('/')
   };
   return (
     <>

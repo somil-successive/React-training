@@ -9,7 +9,7 @@ const RoutingItem = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProductsList />}>
-            <Route path="/productId" element={<ProductDetail />} />
+            <Route path="/:productId" element={<ProductDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>
