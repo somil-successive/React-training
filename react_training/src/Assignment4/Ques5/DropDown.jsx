@@ -6,7 +6,7 @@ const DropDown = () => {
   const [selectedOption, setSelectedOption] = useState("UP");
   return (
     <>
-    <p> SELECT STATE</p>
+      <p> SELECT STATE</p>
       <select
         name="Options"
         onChange={(e) => setSelectedOption(e.target.value)}

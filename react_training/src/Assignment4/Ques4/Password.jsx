@@ -23,14 +23,16 @@ const Password = () => {
         onChange={(e) => setPass(e.target.value)}
         value={pass}
       />
-      <br /><br/>
+      <br />
+      <br />
       <input
         type="password"
         placeholder="Confirm Password"
         onChange={(e) => setRePass(e.target.value)}
         value={rePass}
       />
-      <br /><br/>
+      <br />
+      <br />
       <button onClick={handleClick}>Submit</button>
       {isMatched ? <p>Login Successfully!</p> : <p>Enter Password</p>}
     </>
