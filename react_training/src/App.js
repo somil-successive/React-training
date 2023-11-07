@@ -97,15 +97,15 @@ function App() {
       <hr />
       <h3>Question-8</h3>
       <Transition />
-      <h3>Question-9</h3>
+      <hr/>
 
+      <h3>Question-9</h3>
       <ThemeSwitcher />
 
       <hr />
       <h3>Question-10</h3>
 
       <LanguageSwitcher />
-      <hr />
       <hr />
       <h3>Question-11</h3>
       <ShoppingCart />
