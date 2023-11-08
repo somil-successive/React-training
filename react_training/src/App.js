@@ -6,6 +6,9 @@ import Question2 from "./Assignment5/Question2";
 import Question3 from "./Assignment5/Question3";
 import Question4 from "./Assignment5/Question4";
 import Question5 from "./Assignment5/Question5";
+import Question6 from "./Assignment5/Question6";
+import Question7 from "./Assignment5/Question7";
+import Sample from "./Assignment5/Ques12/Sample";
 
  function App(){
   return(
@@ -24,6 +27,15 @@ import Question5 from "./Assignment5/Question5";
     <hr/>
     <h2>Question-5</h2>
     <Question5 />
+    <hr/>
+    <h2>Question-6</h2>
+    <Question6 />
+    <hr/>
+    <h2>Question-7</h2>
+    <Question7 />
+    <hr/>
+    <h2>Question-12</h2>
+    <Sample/>
     
     </div>
   )

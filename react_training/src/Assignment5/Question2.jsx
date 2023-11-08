@@ -4,24 +4,17 @@ import React, { useEffect, useState } from "react";
 
 const Question2 = () => {
   const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/uss")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
+    fetch("https://jsonplaceholder.typicode.om/users")
+      .then((response) => response.json())
+      .then((respnse) => {
+        setData(respnse);
       })
-      .then((data) => {
-        setData(data);
-      })
-      .catch((error) => {
-        console.log("Invalid api:", error);
-      });
+      .catch((err) => setError(err));
   }, [isButtonClicked]);
-
   const handleClick = () => {
     setIsButtonClicked(true);
   };
@@ -29,16 +22,19 @@ const Question2 = () => {
   return (
     <div>
       <h3>Error Handling :</h3>
-      {isButtonClicked ? (
+      {!error ? (
         <ul>
           {data.map((user) => (
             <li key={user.id}>{user.email}</li>
           ))}
         </ul>
-      ) : null}
-
-      <br />
-      <button onClick={handleClick} disabled={isButtonClicked}>Fetch Data</button>
+      ) : <>
+      <p>Error Occured</p>
+        <button onClick={handleClick}>
+          Retry!
+        </button>
+        </>
+      }
     </div>
   );
 };
