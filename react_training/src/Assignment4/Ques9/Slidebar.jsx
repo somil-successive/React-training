@@ -41,12 +41,12 @@ function Slidebar() {
     >
       <List>
         <ListItem>
-          <ListItemButton onClick={() => Navigate("/")}>
+          <ListItemButton onClick={() => Navigate("/assignment5/q9")}>
             <ListItemText primary="Home" />
           </ListItemButton>
         </ListItem>
         <ListItem>
-          <ListItemButton onClick={() => Navigate("/inbox")}>
+          <ListItemButton onClick={() => Navigate("/assignment5/q9/inbox")}>
             <ListItemText primary="Inbox" />
           </ListItemButton>
         </ListItem>

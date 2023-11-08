@@ -17,11 +17,11 @@ const ControlledForm = () => {
   const handleRadio = (e) => {
     setSelectedOption(e.target.value);
   };
-  const handleClick=()=>{
-    console.log({name});
-    console.log({checked});
-    console.log({selectedOption});
-  }
+  const handleClick = () => {
+    console.log({ name });
+    console.log({ checked });
+    console.log({ selectedOption });
+  };
   return (
     <>
       <input
@@ -66,7 +66,9 @@ const ControlledForm = () => {
           onChange={handleRadio}
         />
         Javascript
-      </label><br/><br/>
+      </label>
+      <br />
+      <br />
       <button onClick={handleClick}>Submit</button>
     </>
   );

@@ -1,13 +1,13 @@
 import React from "react";
 import Slidebar from "./Slidebar";
 
-const Inbox = () => {
+const HomeQ9 = () => {
   return (
     <>
       <Slidebar />
-      <p>inbox page</p>
+      <p>home page</p>
     </>
   );
 };
 
-export default Inbox;
+export default HomeQ9;

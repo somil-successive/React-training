@@ -1,14 +1,14 @@
 import React from "react";
 import LoginPage from "./LoginPage";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-const Home = () => {
+const HomeQ4 = () => {
   return (
     <>
       <nav>
-        <Link to="/login">Go To Login</Link>
+        <Link to="/assignment4/login">Go To Login</Link>
       </nav>
     </>
   );
 };
 
-export default Home;
+export default HomeQ4;
