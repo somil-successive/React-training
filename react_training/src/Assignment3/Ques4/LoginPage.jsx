@@ -18,9 +18,9 @@ function LoginPage() {
 
   const handleClick = () => {
     if (userName === hardcodeUsername && password === hardcodePassword) {
-      navigate("/about");
+      navigate("/assignment4/about");
     } else {
-      navigate("/login");
+      navigate("/assignment4/login");
     }
   };
 

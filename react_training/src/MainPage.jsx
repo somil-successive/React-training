@@ -8,6 +8,8 @@ const MainPage = () => {
         <Link to='/assignment1'>Assignment-1</Link>
         <br/>
         <Link to='/assignment2'>Assignment-2</Link>
+        <br/>
+        <Link to='/assignment3'>Assignment-3</Link>
     </>
   )
 }

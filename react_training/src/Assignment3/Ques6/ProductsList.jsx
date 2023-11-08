@@ -5,7 +5,7 @@
 // Add a "Go Back" button on the detail page to return to the list.
 
 import React from "react";
-import {  Link, Outlet} from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 
 const ProductsList = () => {
@@ -13,20 +13,15 @@ const ProductsList = () => {
   return (
     <>
       <div>
-      {
-          products.map((item) => {
-            return (
-                <li>
-              <Link to={`${item}`}>{item}</Link>
-              </li>
-            )
-          })
-        }
+        {products.map((item) => {
+          return (
+            <li>
+              <Link to={`/question6/${item}`}>{item}</Link>
+            </li>
+          );
+        })}
       </div>
       <Outlet />
-      
-
-     
     </>
   );
 };

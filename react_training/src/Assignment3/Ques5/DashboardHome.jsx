@@ -6,11 +6,11 @@
 
 import React from "react";
 
-const DashboardHome=()=>{
-    return(
-        <>
-        <p>Home</p>
-        </>
-    );
-}
+const DashboardHome = () => {
+  return (
+    <>
+      <p>Home</p>
+    </>
+  );
+};
 export default DashboardHome;

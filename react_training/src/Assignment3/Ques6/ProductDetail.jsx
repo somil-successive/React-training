@@ -5,7 +5,7 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/')
+    navigate("/question6");
   };
   return (
     <>

@@ -5,10 +5,12 @@
 // Add a "404 Not Found" page for any invalid routes.
 
 import React from "react";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
       <h4> Welcome To Home Page</h4>
+      <Link to="/assignment3/about">About</Link>
     </>
   );
 };

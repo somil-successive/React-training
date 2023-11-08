@@ -3,10 +3,9 @@ import { useState, useContext } from "react";
 import { ThemeContext, UserContext } from "./Parent";
 
 const Child = () => {
-  const {login, setLogin} = useContext(UserContext);
-  const {theme, toggleTheme} = useContext(ThemeContext);
+  const { login, setLogin } = useContext(UserContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [name, setName] = useState("");
-  
 
   const divStyle = {
     backgroundColor: theme === "dark" ? "black" : "white",
@@ -25,7 +24,7 @@ const Child = () => {
         placeholder="Enter Name"
       />
       <button onClick={handleClick}>Login</button>
-      <p style={{color:"red"}}>{login}</p>
+      <p style={{ color: "red" }}>{login}</p>
 
       <button
         onClick={() => {
