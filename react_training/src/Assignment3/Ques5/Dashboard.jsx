@@ -8,13 +8,13 @@ const Dashboard = () => {
       <nav>
         <ul>
           <li>
-            <Link to="profile">Profile</Link>
+            <Link to="/assignment5/profile">Profile</Link>
           </li>
           <li>
-            <Link to="setting">Setting</Link>
+            <Link to="/assignment5/setting">Setting</Link>
           </li>
           <li>
-            <Link to="dhome">Dashboard Home</Link>
+            <Link to="/assignment5/dhome">Dashboard Home</Link>
           </li>
         </ul>
       </nav>
