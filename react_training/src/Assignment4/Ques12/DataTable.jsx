@@ -19,6 +19,12 @@ const rows = [
   { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
   { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
   { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
+  { id: 4, lastName: "Snowwhite", firstName: "Jon", age: 35 },
+  { id: 5, lastName: "Lannister", firstName: "Cersei", age: 42 },
+  { id: 6, lastName: "Lannister", firstName: "Jaime", age: 45 },
+  { id: 7, lastName: "Snow", firstName: "Jon", age: 35 },
+  { id: 8, lastName: "Lannister", firstName: "Cersei", age: 42 },
+  { id: 9, lastName: "Lannister", firstName: "Jaime", age: 45 },
 ];
 
 export default function DataTable() {

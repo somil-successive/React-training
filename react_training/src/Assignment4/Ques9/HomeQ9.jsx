@@ -1,7 +1,7 @@
 import React from "react";
 import Slidebar from "./Slidebar";
 
-const Home = () => {
+const HomeQ9 = () => {
   return (
     <>
       <Slidebar />
@@ -10,4 +10,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeQ9;

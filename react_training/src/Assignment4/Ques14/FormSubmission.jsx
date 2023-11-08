@@ -17,7 +17,6 @@ const validationSchema = Yup.object({
 const initialValues = {
   email: "",
   password: "",
-  
 };
 
 export default function FormSubmission() {
@@ -61,7 +60,7 @@ export default function FormSubmission() {
       <br />
       {errors.password && <small>{errors.password}</small>}
       <br />
-      
+
       <Button type="submit" variant="contained">
         Submit
       </Button>

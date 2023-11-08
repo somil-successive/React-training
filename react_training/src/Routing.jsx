@@ -15,6 +15,9 @@ import Setting from "./Assignment3/Ques5/Setting";
 import DashboardHome from "./Assignment3/Ques5/DashboardHome";
 import ProductsList from "./Assignment3/Ques6/ProductsList";
 import ProductDetail from "./Assignment3/Ques6/ProductDetail";
+import HomeQ9 from "./Assignment4/Ques9/HomeQ9";
+import Inbox from "./Assignment4/Ques9/Inbox";
+import Assignment_4 from "./Assignment4/Assignment_4";
 const Routing = () => {
   return (
     <>
@@ -22,9 +25,7 @@ const Routing = () => {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/assignment1" element={<Assignment_1 />} />
-
           <Route path="/assignment2" element={<Assignment_2 />} />
-
           <Route path="/assignment3" element={<Assignment_3 />} />
 
           <Route path="/assignment3/home" element={<Home />} />
@@ -42,6 +43,10 @@ const Routing = () => {
 
           <Route path="/question6" element={<ProductsList />} />
           <Route path="/question6/:productId" element={<ProductDetail />} />
+
+          <Route path="/assignment4" element={<Assignment_4 />} />
+          <Route path="/assignment5/q9" element={<HomeQ9 />} />
+          <Route path="/assignment5/q9/inbox" element={<Inbox />} />
         </Routes>
       </BrowserRouter>
     </>
