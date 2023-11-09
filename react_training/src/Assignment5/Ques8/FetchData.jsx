@@ -14,14 +14,14 @@ function FetchData() {
   console.log(data);
   const [showData,setshowData]=useState([]);
   useEffect(()=>{
-    setshowData(data.edges);
+    setshowData(data?.edges);
   },[data])
 
   
   console.log(data?.allFilms, loading, error);
   return(
     <>
-     {showData?.map((item)=>{
+     {!loading && showData?.map((item)=>{
         <li>{item.cursor}</li>
     })} 
     
