@@ -1,5 +1,5 @@
 import React from "react";
-import FetchData from "./FetchData";
+import FetchData from "./Question8.2";
 
 import {
   ApolloClient,
@@ -10,7 +10,7 @@ import {
 const link = new HttpLink({
   uri: "https://star-wars-graphql-dont-change.p.rapidapi.com/",
   headers: {
-    "x-rapidapi-key": "7b0553b7b0mshc584db9a76227a1p17ec44jsn43a0d948276a",
+    "x-rapidapi-key": "10daac3d78msh6b0ad67e451f6f0p139f95jsna05747bec7f3",
     "x-rapidapi-host": "star-wars-graphql-dont-change.p.rapidapi.com",
     "Content-Type": "application/json",
   },
@@ -23,6 +23,7 @@ const client = new ApolloClient({
 
 const ApolloProvider1 = () => {
   return (
+    
     <ApolloProvider client={client}>
       <FetchData />
     </ApolloProvider>

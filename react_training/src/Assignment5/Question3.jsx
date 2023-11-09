@@ -16,6 +16,7 @@ const Question3 = () => {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         setData(data);
         setIsLoading(false);
       })

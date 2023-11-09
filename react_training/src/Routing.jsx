@@ -19,6 +19,7 @@ import HomeQ9 from "./Assignment4/Ques9/HomeQ9";
 import Inbox from "./Assignment4/Ques9/Inbox";
 import Assignment_4 from "./Assignment4/Assignment_4";
 import Assignment_5 from "./Assignment5/Assignment_5";
+import HomeQ14 from "./Assignment5/Question14.3";
 const Routing = () => {
   return (
     <>
@@ -47,6 +48,7 @@ const Routing = () => {
           <Route path="/assignment5/q9" element={<HomeQ9 />} />
           <Route path="/assignment5/q9/inbox" element={<Inbox />} />
           <Route path="/assign5" element={<Assignment_5 />} />
+          <Route path="/assignment-5/Ques-14" element={<HomeQ14 />} />
         </Routes>
       </BrowserRouter>
     </>

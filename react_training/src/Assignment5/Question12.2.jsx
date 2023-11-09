@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./Question12.1";
+
 
 const Sample = () => {
   const handleClickPrimary = () => {
