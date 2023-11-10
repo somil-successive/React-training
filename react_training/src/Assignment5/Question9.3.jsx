@@ -1,18 +1,12 @@
 import { gql } from "@apollo/client";
 
-export const GET_ALL_FILMS_1 = gql`
-  query MyQuery($after: String, $before: String) {
-    allFilms(after: $after, before: $before) {
+export const GET_ALL_CAPITALS = gql`
+  query MyQuery {
+    countries(displayOptions: {}, currencyCode: "", namePrefix: "") {
       edges {
-        cursor
-      }
-      films {
-        characterConnection {
-          characters {
-            birthYear
-            eyeColor
-            name
-          }
+        node {
+          capital
+          name
         }
       }
     }

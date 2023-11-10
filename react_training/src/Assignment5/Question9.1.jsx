@@ -1,31 +1,26 @@
-import React from "react";
-import {
-  ApolloClient,
-  HttpLink,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
-import ShowData from "./ShowData";
-const link = new HttpLink({
-  uri: "https://star-wars-graphql-dont-change.p.rapidapi.com/",
-  headers: {
-    "x-rapidapi-key": "1cb3b46ad4mshbccb94a2ebb46ddp1d8cecjsne64545d3ee3a",
-    "x-rapidapi-host": "star-wars-graphql-dont-change.p.rapidapi.com",
-    "Content-Type": "application/json",
-  },
-});
+import { useQuery } from "@apollo/client";
 
-const client = new ApolloClient({
-  link: link,
-  cache: new InMemoryCache(),
-});
+import { Pagination } from "./Question9.4";
+import { GET_ALL_CAPITALS } from "./Question9.3";
 
-const ApolloProvider1 = () => {
+const FetchLargeDataGraphQL = () => {
+  const { data, loading, error } = useQuery(GET_ALL_CAPITALS);
+  console.log(data?.countries.edges, loading, error);
+  let showData = loading ? "Can't get data" : data?.countries.edges;
+  console.log(showData);
+
   return (
-    <ApolloProvider client={client}>
-      <ShowData />
-    </ApolloProvider>
+    <>
+      {!loading &&
+        showData?.map((item) => {
+          return (
+            <li>
+              {item.node.name} - {item.node.capital}
+            </li>
+          );
+        })}
+      {!loading && <Pagination rows={showData} rowsPerPage={3} />}
+    </>
   );
 };
-
-export default ApolloProvider;
+export default FetchLargeDataGraphQL;

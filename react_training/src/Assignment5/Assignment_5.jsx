@@ -15,6 +15,7 @@ import LogEvents from "../Assignment5/Question15.2";
 import CustomModal from "./Question13.1";
 import LoginQuesFourTeen from "./Question14.2";
 import FetchAndDisplayData from "./Question16.2";
+import Ques9 from "./Question9.2";
 const Assignment_5 = () => {
   return (
     <div>
@@ -44,7 +45,7 @@ const Assignment_5 = () => {
       <ApolloProvider1 />
       <hr />
       <h2>Question-9</h2>
-        < ApolloProvider2/> 
+      <Ques9 />
       <hr />
       <h2>Question-12</h2>
       <Sample />
