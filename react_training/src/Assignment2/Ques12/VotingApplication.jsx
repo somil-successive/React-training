@@ -8,12 +8,14 @@
 import React, { useReducer } from "react";
 
 const initialState = { bjpCount: 0, aapCount: 0 };
+const PARTY_BJP="BJP";
+const PARTY_AAP="AAP";
 
 const reducer = (state, action) => {
   switch (action) {
-    case "BJP":
+    case PARTY_BJP:
       return { ...state, bjpCount: state.bjpCount + 1 };
-    case "AAP":
+    case PARTY_AAP:
       return { ...state, aapCount: state.aapCount + 1 };
     default:
       return state;
@@ -27,8 +29,8 @@ function VotingApplication() {
     <>
       <p>BJP Votes: {vote.bjpCount}</p>
       <p>AAP Votes: {vote.aapCount}</p>
-      <button onClick={() => dispatch("BJP")}>Vote for BJP</button>
-      <button onClick={() => dispatch("AAP")}>Vote for AAP</button>
+      <button onClick={() => dispatch(PARTY_BJP)}>Vote for BJP</button>
+      <button onClick={() => dispatch(PARTY_AAP)}>Vote for AAP</button>
     </>
   );
 }

@@ -1,4 +1,3 @@
-
 import Counter from "./Ques1/Counter";
 import LanguageSwitcher from "./Ques10/LanguageSwitcher";
 import ShoppingCart from "./Ques11/ShoppingCart";
@@ -20,7 +19,11 @@ import Transition from "./Ques8/Transition";
 import ThemeSwitcher from "./Ques9/ThemeSwitcher";
 
 function Assignment_2() {
-  const tasks = ["Eat", "Sleep", "Repeat"];
+  const tasks = [
+    { name: "Eat", isCompleted: false },
+    { name: "Sleep", isCompleted: false },
+    { name: "Repeat", isCompleted: false },
+  ];
   return (
     <div>
       <h3>Question-1</h3>
