@@ -23,7 +23,7 @@ function TaskList({ tasks }) {
   return (
     <ul>
       {newArr?.map((task, index) => (
-        <li key={index}>
+        <li key={task.name}>
           {task.name}
           <button onClick={() => handleClick(index)}>
             {task.isCompleted ? "Completed" : "Incomplete"}
