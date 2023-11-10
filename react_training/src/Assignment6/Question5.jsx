@@ -2,16 +2,15 @@
 
 import React from "react";
 
-const UserProfile = ({ data }) => {
-  const Info = data.map((value) => (
-    <li>
-      <p>Name: {value.name}</p>
-      <p>Email: {value.email}</p>
-      <p>Phone No. :{value.phone}</p>
-    </li>
-  ));
+const UserProfile = ({name, email, phone})=>{
+    return(
+        <>
+            <p data-testid = "name">{name}</p>
+            <p data-testid = "email">{email}</p>
+            <p data-testid = "phone">{phone}</p>
+        </>
+    )
+}
 
-  return <div>{Info}</div>;
-};
 
 export default UserProfile;
