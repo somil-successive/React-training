@@ -1,17 +1,15 @@
 import React from "react";
-
-
 import {
   ApolloClient,
   HttpLink,
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
-import FetchData1 from "./Question9.2";
+import ShowData from "./ShowData";
 const link = new HttpLink({
   uri: "https://star-wars-graphql-dont-change.p.rapidapi.com/",
   headers: {
-    "x-rapidapi-key": "10daac3d78msh6b0ad67e451f6f0p139f95jsna05747bec7f3",
+    "x-rapidapi-key": "1cb3b46ad4mshbccb94a2ebb46ddp1d8cecjsne64545d3ee3a",
     "x-rapidapi-host": "star-wars-graphql-dont-change.p.rapidapi.com",
     "Content-Type": "application/json",
   },
@@ -22,13 +20,12 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const ApolloProvider2 = () => {
+const ApolloProvider1 = () => {
   return (
-    
     <ApolloProvider client={client}>
-      <FetchData1/>
+      <ShowData />
     </ApolloProvider>
   );
 };
 
-export default ApolloProvider2;
+export default ApolloProvider;

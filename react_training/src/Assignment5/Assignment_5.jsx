@@ -43,8 +43,8 @@ const Assignment_5 = () => {
       <h2>Question-8</h2>
       <ApolloProvider1 />
       <hr />
-      {/* <h2>Question-9</h2>
-        < ApolloProvider2/>  */}
+      <h2>Question-9</h2>
+        < ApolloProvider2/> 
       <hr />
       <h2>Question-12</h2>
       <Sample />
