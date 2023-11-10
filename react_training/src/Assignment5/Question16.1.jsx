@@ -18,7 +18,9 @@ const EnhancedComponent = (url) => {
 };
 
 const WithDataFetching = (OriginalComponent) => (props) => {
-  const { data } = EnhancedComponent("https://jsonplaceholder.typicode.com/posts");
-  return <OriginalComponent data={data}  />;
+  const { data } = EnhancedComponent(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
+  return <OriginalComponent data={data} />;
 };
 export default WithDataFetching;
