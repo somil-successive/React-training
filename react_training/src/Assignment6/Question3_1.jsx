@@ -14,11 +14,11 @@ const Counter6 = () => {
   return (
     <div>
       {count}
-      <br/>
+      <br />
       <button data-testid="inc" onClick={handleInc}>
         Increment
       </button>
-      <br/>
+      <br />
       <button data-testid="dec" onClick={handleDec}>
         Decrement
       </button>
