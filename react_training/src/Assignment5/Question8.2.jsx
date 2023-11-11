@@ -18,9 +18,12 @@ function FetchData() {
   }, [data]);
 
   console.log(data?.allFilms.edges, loading, error);
-  return <>
-  <p>GraphQL GET:</p>
-  {!loading && showData?.map((item) => <li>{item.cursor}</li>)}</>;
+  return (
+    <>
+      <p>GraphQL GET:</p>
+      {!loading && showData?.map((item) => <li>{item.cursor}</li>)}
+    </>
+  );
 }
 
 export default FetchData;

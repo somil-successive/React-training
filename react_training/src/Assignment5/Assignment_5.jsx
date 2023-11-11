@@ -8,14 +8,15 @@ import ApolloProvider1 from "./Question8.1";
 import Question6 from "./Question6";
 import Question7 from "./Question7";
 import Question4 from "./Question4";
-import ApolloProvider2 from "./Question9.1";
+
 import Sample from "./Question12.2";
 import LogEvents from "../Assignment5/Question15.2";
 
 import CustomModal from "./Question13.1";
-import LoginQuesFourTeen from "./Question14.2";
+import HomeQ14 from "./Question14.3";
 import FetchAndDisplayData from "./Question16.2";
 import Ques9 from "./Question9.2";
+import Task9 from "./Question9.2";
 const Assignment_5 = () => {
   return (
     <div>
@@ -45,7 +46,7 @@ const Assignment_5 = () => {
       <ApolloProvider1 />
       <hr />
       <h2>Question-9</h2>
-      <Ques9 />
+      <Task9 />
       <hr />
       <h2>Question-12</h2>
       <Sample />
@@ -54,7 +55,7 @@ const Assignment_5 = () => {
       <CustomModal />
       <hr />
       <h2>Question-14</h2>
-      <LoginQuesFourTeen />
+      <HomeQ14 />
       <hr />
       <h2>Question-15</h2>
       <LogEvents />

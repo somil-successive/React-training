@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import withAuth from "./Question14.1";
 
 const HomeQ14 = () => {
   return (
     <div>
       <p>Home Page</p>
     </div>
-  )
-}
+  );
+};
 
-export default HomeQ14;
+export default withAuth(HomeQ14);

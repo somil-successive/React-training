@@ -1,12 +1,17 @@
 import { gql } from "@apollo/client";
 
-export const GET_ALL_CAPITALS = gql`
+export const GET_ALL_PEOPLE = gql`
   query MyQuery {
-    countries(displayOptions: {}, currencyCode: "", namePrefix: "") {
+    allPeople {
       edges {
         node {
-          capital
           name
+          gender
+          height
+          mass
+          homeworld {
+            name
+          }
         }
       }
     }

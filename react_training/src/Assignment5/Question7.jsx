@@ -47,7 +47,8 @@ const Question7 = () => {
         name="content"
         onChange={handleChange}
       />
-      <br /><br/>
+      <br />
+      <br />
       <button onClick={handleClick}>Post</button>
     </>
   );
