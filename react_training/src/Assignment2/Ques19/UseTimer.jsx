@@ -6,7 +6,7 @@
 
 import React, { useState, useEffect } from "react";
 
-function UseTimer(initialTime) {
+function useTimer(initialTime) {
   const [time, setTime] = useState(initialTime);
   const [isActive, setIsActive] = useState(false);
 
@@ -35,4 +35,4 @@ function UseTimer(initialTime) {
   return { time, setTime, Start, Pause, isActive, Reset };
 }
 
-export default UseTimer;
+export default useTimer;

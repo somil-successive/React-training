@@ -1,8 +1,8 @@
 import React from "react";
-import UseLocalStorage from "./UseLocalStorage";
+import useLocalStorage from "./UseLocalStorage";
 
 function UserName() {
-  const [name, setName, deleteName] = UseLocalStorage("name", "");
+  const [name, setName, deleteName] = useLocalStorage("name", "");
 
   return (
     <div>
