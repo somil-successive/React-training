@@ -7,7 +7,7 @@
 import React from "react";
 import { useState } from "react";
 
-const UseClipboard = () => {
+const useClipboard = () => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyToClipboard = (text) => {
@@ -29,4 +29,4 @@ const UseClipboard = () => {
   return { isCopied, copyToClipboard };
 };
 
-export default UseClipboard;
+export default useClipboard;

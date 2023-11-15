@@ -5,11 +5,17 @@
 // Customize the content displayed on each sub-page.
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const DashboardHome = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/assignment3");
+  };
   return (
     <>
       <p>Home</p>
+      <button onClick={handleClick}>Go Back</button>
     </>
   );
 };

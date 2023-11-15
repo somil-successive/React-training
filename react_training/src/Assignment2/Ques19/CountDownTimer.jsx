@@ -1,8 +1,8 @@
 import React from "react";
-import UseTimer from "./UseTimer";
+import useTimer from "./UseTimer";
 
 function CountDownTimer() {
-  const { time, setTime, Start, Pause, isActive, Reset } = UseTimer(10);
+  const { time, setTime, Start, Pause, isActive, Reset } = useTimer(10);
 
   return (
     <>

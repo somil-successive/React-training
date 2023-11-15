@@ -7,23 +7,27 @@
 import React, { useCallback, useState } from "react";
 
 function TaskList({ tasks }) {
-  const [statuses, setStatuses] = useState("");
-
+  const [newArr, setNewArr] = useState(tasks);
+  console.log(tasks);
   const handleClick = useCallback((index) => {
-    setStatuses((prevStatuses) => {
-      const updatedStatuses = [...prevStatuses];
-      updatedStatuses[index] = "Completed";
-      return updatedStatuses;
-    });
+    setNewArr(
+      newArr.filter((item, id) => {
+        if (index === id) {
+          item.isCompleted = !item.isCompleted;
+        }
+        return item;
+      })
+    );
   }, []);
 
   return (
     <ul>
-      {tasks.map((task, index) => (
-        <li key={index}>
-          {task}
-          <button onClick={() => handleClick(index)}>Complete</button>
-          <p>{statuses[index]}</p>
+      {newArr?.map((task, index) => (
+        <li key={task.name}>
+          {task.name}
+          <button onClick={() => handleClick(index)}>
+            {task.isCompleted ? "Completed" : "Incomplete"}
+          </button>
         </li>
       ))}
     </ul>

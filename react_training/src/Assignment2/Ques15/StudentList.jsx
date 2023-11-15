@@ -11,7 +11,7 @@ function StudentList() {
   const [newName, setNewName] = useState("");
   const [studentNames, setStudentNames] = useState(initialStudentNames);
   const memoisedName = useMemo(() => studentNames, [studentNames]);
-  const addName = (event) => {
+  const addName = () => {
     setStudentNames([...studentNames, newName]);
     setNewName("");
   };
@@ -19,8 +19,8 @@ function StudentList() {
   return (
     <>
       <ul>
-        {memoisedName.map((name, index) => (
-          <li key={index}>{name}</li>
+        {memoisedName.map((name) => (
+          <li key={name}>{name}</li>
         ))}
       </ul>
       <input
