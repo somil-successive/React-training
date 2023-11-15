@@ -16,8 +16,8 @@ function EmployeeSalary() {
 
   const averageSalary = useMemo(() => {
     const totalSalary = data.reduce((acc, item) => acc + item.salary, 0);
-    const numberOfEmplyees = data.length;
-    return totalSalary / numberOfEmplyees;
+
+    return totalSalary / data.length;
   }, [data]);
 
   const handleUpdate = (index, newsalary) => {

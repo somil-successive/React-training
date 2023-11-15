@@ -1,10 +1,10 @@
 import React from "react";
-import UseClipboard from "./UseClipboard";
+import useClipboard from "./UseClipboard";
 import { useState } from "react";
 
 const Component = () => {
   const [text, setText] = useState("");
-  const { isCopied, copyToClipboard } = UseClipboard();
+  const { isCopied, copyToClipboard } = useClipboard();
 
   return (
     <div>

@@ -11,13 +11,20 @@ import Child from "./Child";
 
 function Parent() {
   const [count, setCount] = useState(0);
-  const Increment = useCallback(() => {
+  const incrementCount = useCallback(() => {
     setCount(count + 1);
   }, [count]);
-  const Reset = () => {
+  const resetCount = () => {
     setCount(0);
   };
-  return <Child Increment={Increment} count={count} Reset={Reset} />;
+  return (
+    <Child
+      incrementCount={incrementCount}
+      count={count}
+      resetCount={resetCount}
+    />
+  );
 }
 
 export default Parent;
+
