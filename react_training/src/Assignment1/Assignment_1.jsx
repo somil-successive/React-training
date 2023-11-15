@@ -1,12 +1,13 @@
 import React from "react";
-import Greeting from "./Questions/Ques1/Greeting";
-import UserCard from "./Questions/Ques2/UserCard";
-import Weather from "./Questions/Ques3/Weather";
-import Counter from "./Questions/Ques4/Counter";
-import TaskList from "./Questions/Ques5/TaskList";
-import Button from "./Questions/Ques6/Button";
+import Greeting from "./Ques1/Greeting";
+import UserCard from "./Ques2/UserCard";
+import Weather from "./Ques3/Weather";
+import Counter from "./Ques4/Counter";
+import TaskList from "./Ques5/TaskList";
+import Button from "./Ques6/Button";
 
-function App() {
+
+function Assignment_1() {
   const task = ["Eat", "Sleep", "Code", "Repeat"];
   const data = [
     {
@@ -46,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default Assignment_1;
