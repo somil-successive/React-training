@@ -12,6 +12,8 @@ const MainPage = () => {
       <Link to="/assignment3">Assignment-3</Link>
       <br />
       <Link to="/assignment4">Assignment-4</Link>
+      <br />
+      <Link to="/assign5">Assignment-5</Link>
     </>
   );
 };
