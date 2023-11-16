@@ -51,6 +51,7 @@ const Assignment_4 = () => {
       <hr />
       <h2>Question-12</h2>
       <DataTable />
+      <br/><br/>
       <hr />
       <h2>Question-13</h2>
       <FormValidation />
