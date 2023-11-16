@@ -28,12 +28,13 @@ const Question2 = () => {
             <li key={user.id}>{user.email}</li>
           ))}
         </ul>
-      ) : (
-        <>
-          <p>Error Occured</p>
-          <button onClick={handleClick}>Retry!</button>
+      ) : <>
+      <p>Error Occured</p>
+        <button onClick={handleClick}>
+          Retry!
+        </button>
         </>
-      )}
+      }
     </div>
   );
 };

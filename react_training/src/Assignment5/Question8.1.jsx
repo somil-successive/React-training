@@ -23,6 +23,7 @@ const client = new ApolloClient({
 
 const ApolloProvider1 = () => {
   return (
+    
     <ApolloProvider client={client}>
       <FetchData />
     </ApolloProvider>

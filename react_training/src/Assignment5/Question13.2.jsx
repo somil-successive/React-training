@@ -1,3 +1,6 @@
+
+
+
 const Modal = ({ isOpen, closeModal, children }) => {
   if (!isOpen) return null;
 

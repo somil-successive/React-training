@@ -8,15 +8,13 @@ import ApolloProvider1 from "./Question8.1";
 import Question6 from "./Question6";
 import Question7 from "./Question7";
 import Question4 from "./Question4";
-
 import Sample from "./Question12.2";
 import LogEvents from "../Assignment5/Question15.2";
-
 import CustomModal from "./Question13.1";
-import HomeQ14 from "./Question14.3";
 import FetchAndDisplayData from "./Question16.2";
-import Ques9 from "./Question9.2";
+import HomeQ14 from "./Question14.3";
 import Task9 from "./Question9.2";
+
 const Assignment_5 = () => {
   return (
     <div>
@@ -29,7 +27,6 @@ const Assignment_5 = () => {
       <h2>Question-3</h2>
       <Question3 />
       <hr />
-
       <h2>Question-4</h2>
       <Question4 />
       <hr />
