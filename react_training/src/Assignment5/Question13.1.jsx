@@ -1,8 +1,18 @@
+import { useState } from "react";
 import Modal from "./Question13.2";
-import useModal from "./Question13.3";
 
 const CustomModal = () => {
-  const { isOpen, openModal, closeModal } = useModal();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>

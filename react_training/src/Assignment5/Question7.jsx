@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Question7 = () => {
-  const initialData = { title: "", content: "" };
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState({ title: "", content: "" });
 
   const handleChange = (e) => {
     setData({
@@ -14,17 +13,18 @@ const Question7 = () => {
     });
   };
 
-  const handleClick = (e) => {
+  async function handleClick(e) {
     e.preventDefault();
-    axios
-      .post("https://jsonplaceholder.typicode.com/posts", data)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
+    try {
+      const response = await axios.post(
+        "https://jsonplaceholder.typicode.com/posts",
+        data
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
