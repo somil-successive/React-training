@@ -10,7 +10,7 @@ const CustomModal = () => {
       <button onClick={openModal}>Open Modal</button>
 
       <Modal isOpen={isOpen} closeModal={closeModal}>
-        <h4>custom modal</h4>
+        <h2>Custom Modal</h2>
       </Modal>
     </>
   );
