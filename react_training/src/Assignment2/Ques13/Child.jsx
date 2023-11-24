@@ -10,3 +10,5 @@ function Child({ incrementCount, count, resetCount }) {
   );
 }
 export default Child;
+
+
