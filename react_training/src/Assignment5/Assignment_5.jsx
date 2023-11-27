@@ -11,10 +11,10 @@ import Question4 from "./Question4";
 import Sample from "./Question12.2";
 import LogEvents from "../Assignment5/Question15.2";
 import CustomModal from "./Question13.1";
-import FetchAndDisplayData from "./Question16.2";
 import HomeQ14 from "./Question14.3";
+import FetchAndDisplayData from "./Question16.2";
+import Ques9 from "./Question9.2";
 import Task9 from "./Question9.2";
-
 const Assignment_5 = () => {
   return (
     <div>

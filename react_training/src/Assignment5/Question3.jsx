@@ -8,21 +8,23 @@ const Question3 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setData(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log("Invalid api:", error);
-      });
+    setTimeout(() => {
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          setData(data);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log("Invalid api:", error);
+        });
+    }, 3000);
   }, [isButtonClicked]);
 
   const handleClick = () => {
@@ -31,7 +33,6 @@ const Question3 = () => {
 
   return (
     <div>
-     
       {isButtonClicked ? (
         isLoading ? (
           "Loading..."
