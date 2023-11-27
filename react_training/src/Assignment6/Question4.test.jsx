@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import LoginQ4 from "./Question4";
 
 describe("LoginQ4 Component", () => {
